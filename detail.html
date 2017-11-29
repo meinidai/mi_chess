@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>mi</title>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="container" id="container">
+        <div class="circle" style="display: none" >
+            <div class="before"></div>
+            <h1 class="win">恭喜！你赢了！<br/></h1>
+            <div class="after"></div>
+        </div>
+            <canvas id="miChess" width="400" height="400">您儿的浏览器已经被淘汰了，您儿已经凹凸了</canvas>
+        </div>
+		<!--<audio id="em" hidden="true" loop="true" src="music/002.mp3"></audio>-->
+        <script type="text/javascript">
+            var url = location.href;
+
+            var tmp = url.split("?")[1];
+            var tmp1 = tmp.split("&")[0];
+            var tmp2 = tmp1.split("=")[1];
+            var tmp3 = tmp.split("&")[1];
+            var tmp4 = tmp3.split("=")[1];
+			var tmp5 = tmp.split("&")[2];
+			var tmp6 = tmp5.split("=")[1];
+
+			if(tmp6 == 1){
+				document.getElementById("em").play();
+			}else{
+				document.getElementById("em").pause();
+			}
+			//var tmp5 = tmp.split("&")[2];
+
+           // var tmp6 = tmp3.split("=")[2];
+			
+			//alert("tmp5="tmp5 +"..."+"tmp6=" + tmp6);
+            console.log(tmp4);
+
+            console.log(tmp2);
+
+            var a = []
+            for(var i=0;i<3;i++){
+                a[i]=++i;
+            }
+            console.log(i)
+        </script>
+		
+        <script src="js/test.js"></script>
+		<script src="js/play.js"></script>
+    </body>
+</html>

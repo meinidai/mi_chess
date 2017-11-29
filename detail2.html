@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>mi</title>
+        <link href="css/main.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="container" id="container">
+        <div class="circle" style="display: none" >
+            <div class="before"></div>
+            <h1 class="win">下方棋子胜利！<br/></h1>
+            <div class="after"></div>
+        </div>
+            <canvas id="miChess" width="400" height="400">请使用新版chrome浏览器</canvas>
+        </div>
+		<!--<audio id="em" hidden="true" loop="true" src="music/002.mp3"></audio>-->
+        <script type="text/javascript">
+            var url = location.href;
+
+            var tmp = url.split("?")[1];
+            var tmp1 = tmp.split("&")[0];
+            var tmp2 = tmp1.split("=")[1];
+            var tmp3 = tmp.split("&")[1];
+            var tmp4 = tmp3.split("=")[1];
+			var tmp5 = tmp.split("&")[2];
+			var tmp6 = tmp5.split("=")[1];
+
+			if(tmp6 == 1){
+				document.getElementById("em").play();
+			}else{
+				document.getElementById("em").pause();
+			}
+            console.log(tmp4);
+            console.log(tmp2);
+            var a = []
+            for(var i=0;i<3;i++){
+                a[i]=++i;
+            }
+            console.log(i)
+        </script>
+		
+        <script src="js/test.js"></script>
+		<script src="js/play2.js"></script>
+    </body>
+</html>
